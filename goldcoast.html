@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference venues in Gold Coast QLD | CVBS, Worldwide Venue Finding Solutions</title>
+<style>
+/* CVBS Shared Styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --teal: #3BC9D9;
+  --teal-dark: #28A8B6;
+  --navy: #0D2233;
+  --navy-deep: #071520;
+  --text: #0D1F2D;
+  --muted: #555;
+  --light-bg: #F7FDFE;
+  --border: #C8EEF3;
+  --border-light: #EEF8FA;
+  --accent-bg: #E4F9FC;
+  --accent-border: #B8EEF4;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--text); line-height: 1.6; background: #fff; }
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+.nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 40px; height: 68px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
+.nav-logo { display: flex; align-items: center; }
+.nav-logo img { height: 36px; width: auto; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a { color: var(--text); font-size: 13px; text-decoration: none; opacity: 0.65; transition: opacity 0.15s; }
+.nav-links a:hover { opacity: 1; }
+.nav-links a.active { opacity: 1; color: var(--teal); font-weight: 500; }
+.nav-btn { background: var(--teal) !important; color: #fff !important; opacity: 1 !important; padding: 9px 20px; border-radius: var(--radius-sm); font-weight: 500; font-size: 13px !important; transition: background 0.15s !important; }
+.nav-btn:hover { background: var(--teal-dark) !important; text-decoration: none !important; }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--light-bg); border-bottom: 1px solid #D4EEEC; padding: 11px 48px; display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { font-size: 12px; color: var(--teal); }
+.breadcrumb.sep { font-size: 12px; color: #ccc; }
+.breadcrumb.cur { font-size: 12px; color: #888; }
+
+/* FOOTER */
+.footer { background: var(--navy-deep); padding: 48px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+.footer-logo { margin-bottom: 14px; }
+.footer-logo img { height: 32px; opacity: 0.8; }
+.footer-tagline { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.65; max-width: 240px; }
+.footer-col-title { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 8px; transition: color 0.15s; }
+.footer-col a:hover { color: var(--teal); text-decoration: none; }
+.footer-bar { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+.footer-bar p { font-size: 11px; color: rgba(255,255,255,0.25); }
+.footer-bar-links { display: flex; gap: 20px; }
+.footer-bar-links a { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* SECTION EYEBROW */
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.eyebrow-line { width: 24px; height: 1.5px; background: var(--teal); flex-shrink: 0; }
+.eyebrow-text { font-size: 10px; color: var(--teal); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; }
+
+/* HEADINGS */
+.section-title { font-size: 30px; font-weight: 500; color: var(--text); font-family: var(--font-serif); line-height: 1.2; margin-bottom: 10px; }
+.section-title em { font-style: italic; color: var(--teal); }
+.section-subtitle { font-size: 13px; color: var(--muted); line-height: 1.75; max-width: 560px; }
+
+/* BUTTONS */
+.btn { display: inline-block; padding: 12px 28px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; cursor: pointer; border: none; transition: all 0.15s; text-decoration: none; }
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-dark); text-decoration: none; color: #fff; }
+.btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+.btn-outline:hover { background: rgba(255,255,255,0.12); text-decoration: none; color: #fff; }
+.btn-white { background: #fff; color: var(--teal-dark); }
+.btn-white:hover { background: rgba(255,255,255,0.9); text-decoration: none; }
+
+/* CARDS */
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.card-teal { background: var(--accent-bg); border-color: var(--accent-border); }
+
+/* TRUST BAR */
+.trust-bar { background: var(--navy); padding: 20px 48px; display: flex; gap: 0; }
+.trust-item { flex: 1; text-align: center; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.08); }
+.trust-item:last-child { border-right: none; }
+.trust-n { font-size: 26px; font-weight: 500; color: var(--teal); font-family: var(--font-serif); line-height: 1; margin-bottom: 4px; }
+.trust-l { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+/* TESTIMONIAL CARD */
+.testi-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+.testi-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.star { width: 12px; height: 12px; background: var(--teal); clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); }
+.testi-q { font-size: 13px; color: #444; line-height: 1.75; font-style: italic; margin-bottom: 18px; padding-top: 28px; position: relative; }
+.testi-q::before { content: '\201C'; font-family: var(--font-serif); font-size: 52px; color: var(--teal); position: absolute; top: -6px; left: -4px; line-height: 1; opacity: 0.7; }
+.testi-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; }
+.testi-av { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.testi-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.testi-co { font-size: 11px; color: #aaa; }
+.testi-yrs { font-size: 11px; color: var(--teal); font-weight: 500; margin-top: 1px; }
+
+/* CTA BANNER */
+.cta-banner { background: var(--teal); padding: 56px 48px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.cta-banner h2 { font-size: 34px; font-weight: 500; color: #fff; font-family: var(--font-serif); line-height: 1.15; margin-bottom: 12px; }
+.cta-banner h2 em { font-style: italic; opacity: 0.85; }
+.cta-banner p { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 380px; }
+.cta-box { flex-shrink: 0; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius); padding: 28px 32px; min-width: 220px; text-align: center; }
+.cta-box-tag { font-size: 10px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+.cta-box-claim { font-size: 14px; color: #fff; margin-bottom: 18px; line-height: 1.5; }
+.cta-box-note { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 10px; }
+
+/* NOTE BOX */
+.note-box { background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: var(--radius-sm); padding: 14px 18px; font-size: 12px; color: var(--teal-dark); line-height: 1.65; }
+
+/* DIVIDER */
+.divider { height: 1px; background: var(--border-light); margin: 32px 0; }
+
+/* PHOTO PLACEHOLDER */
+.photo-ph { border-radius: var(--radius); overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+.photo-ph-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.35; }
+.photo-ph-ring { width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; }
+.photo-ph-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.8); }
+.photo-ph-label { font-size: 11px; color: rgba(255,255,255,0.8); text-align: center; line-height: 1.4; }
+.photo-ph-corner { position: absolute; bottom: 8px; right: 10px; font-size: 9px; color: rgba(255,255,255,0.4); background: rgba(0,0,0,0.25); padding: 2px 7px; border-radius: 2px; }
+
+/* COLOUR CLASSES FOR PHOTO PLACEHOLDERS */
+.ph-beach { background: linear-gradient(135deg, #0d4a6a 0%, #1a7aaa 50%, #2ab0d0 100%); }
+.ph-highrise { background: linear-gradient(135deg, #1a2a3a 0%, #2a4a6a 60%, #3a6a8a 100%); }
+.ph-navy { background: linear-gradient(135deg, #0a1a2a 0%, #0d2233 100%); }
+.ph-surfers { background: linear-gradient(135deg, #0d5a7a 0%, #1a8aaa 100%); }
+.ph-hinterland { background: linear-gradient(135deg, #1a2a1a 0%, #2a4a2a 60%, #3a6a3a 100%); }
+.ph-broadwater { background: linear-gradient(135deg, #0d4055 0%, #1a7090 50%, #2a90b0 100%); }
+.ph-teal { background: linear-gradient(135deg, #1a8a96 0%, #3BC9D9 100%); }
+.ph-boardroom { background: linear-gradient(135deg, #1a2a2a 0%, #2a4a4a 60%, #1a3a5a 100%); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+ .nav-links { display: none; }
+ .footer-grid { grid-template-columns: 1fr 1fr; }
+ .cta-banner { flex-direction: column; }
+ .trust-bar { flex-wrap: wrap; }
+}
+
+.dest-hero { position:relative;height:360px;overflow:hidden;display:flex;align-items:flex-end; }
+.dest-hero-bg { position:absolute;inset:0;background:#062030; }
+.hero-svg { position:absolute;bottom:60px;left:0;right:0;width:100%;height:220px; }
+.dest-hero-water { position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(180deg,#0d4a6a,#062030);opacity:0.8; }
+.dest-hero-grad { position:absolute;inset:0;background:linear-gradient(to top,rgba(6,32,48,0.92) 0%,rgba(6,32,48,0.4) 55%,transparent 100%); }
+.dest-hero-content { position:relative;z-index:2;padding:40px 48px;width:100%; }
+.dest-eyebrow { display:flex;align-items:center;gap:10px;margin-bottom:12px; }
+.dest-ey-line { width:24px;height:1.5px;background:var(--teal); }
+.dest-ey-text { font-size:10px;color:var(--teal);text-transform:uppercase;letter-spacing:0.12em;font-weight:500; }
+.dest-hero h1 { font-size:44px;font-weight:500;color:#fff;font-family:var(--font-serif);line-height:1.1;margin-bottom:10px; }
+.dest-hero h1 em { font-style:italic;color:var(--teal); }
+.dest-hero p { font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;max-width:480px;margin-bottom:20px; }
+.dest-hero-stats { display:flex;gap:28px; }
+.dhs-n { font-size:24px;font-weight:500;color:var(--teal);font-family:var(--font-serif);line-height:1; }
+.dhs-l { font-size:10px;color:rgba(255,255,255,0.5);margin-top:3px; }
+.brief-bar { background:var(--teal);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;gap:20px; }
+.bb-text { font-size:14px;color:#fff;font-weight:500; }
+.bb-sub { font-size:12px;color:rgba(255,255,255,0.78);margin-top:2px; }
+.dest-main { display:grid;grid-template-columns:1fr 260px;gap:0; }
+.dest-content { padding:40px 48px;background:#fff;border-right:1px solid var(--border); }
+.dest-sidebar { padding:28px 22px;background:var(--light-bg); }
+.photo-strip { display:grid;grid-template-columns:1.6fr 1fr;gap:8px;margin:18px 0;height:190px;border-radius:var(--radius);overflow:hidden; }
+.photo-strip-right { display:grid;grid-template-rows:1fr 1fr;gap:8px; }
+.venue-types { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0; }
+.vt { border:1px solid var(--border);border-radius:var(--radius);overflow:hidden; }
+.vt-photo { height:82px; }
+.vt-body { padding:13px;background:#fff; }
+.vt-name { font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px; }
+.vt-desc { font-size:11px;color:var(--muted);line-height:1.55; }
+.vt-count { display:inline-block;background:var(--accent-bg);color:var(--teal-dark);font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;margin-top:6px; }
+.venue-list { display:flex;flex-direction:column;gap:13px;margin:18px 0; }
+.venue-card { background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:130px 1fr; }
+.vc-photo { min-height:120px; }
+.vc-body { padding:16px; }
+.vc-name { font-size:14px;font-weight:600;color:var(--text);font-family:var(--font-serif);margin-bottom:2px; }
+.vc-area { font-size:11px;color:var(--teal);font-weight:500;margin-bottom:6px; }
+.vc-desc { font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px; }
+.vc-bottom { display:flex;align-items:center;justify-content:space-between; }
+.vc-tags { display:flex;gap:5px;flex-wrap:wrap; }
+.vc-tag { background:var(--light-bg);border:1px solid var(--border);border-radius:3px;padding:2px 7px;font-size:10px;color:#555; }
+.vc-cap-n { font-size:18px;font-weight:500;color:var(--teal);font-family:var(--font-serif);text-align:right;line-height:1; }
+.vc-cap-l { font-size:10px;color:#aaa;text-align:right; }
+.areas { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0; }
+.area { background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden; }
+.area-photo { height:60px; }
+.area-body { padding:12px; }
+.area-name { font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px; }
+.area-desc { font-size:11px;color:var(--muted);line-height:1.55; }
+.area-tag { font-size:10px;color:var(--teal);font-weight:500;margin-top:5px;display:block; }
+.faq { display:flex;flex-direction:column;gap:8px;margin-top:14px; }
+.faq-item { border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff; }
+.faq-q { padding:13px 16px;font-size:13px;font-weight:500;color:var(--text);display:flex;justify-content:space-between; }
+.faq-q::after { content:"+";color:var(--teal);font-size:18px;font-weight:400;flex-shrink:0;margin-left:10px; }
+.faq-a { padding:0 16px 12px;font-size:12px;color:#666;line-height:1.75; }
+.ds-brief { background:var(--teal);border-radius:var(--radius);padding:20px;margin-bottom:16px; }
+.ds-brief-title { font-size:14px;font-weight:500;color:#fff;font-family:var(--font-serif);margin-bottom:6px; }
+.ds-brief-sub { font-size:11px;color:rgba(255,255,255,0.78);margin-bottom:14px;line-height:1.5; }
+.ds-field { margin-bottom:10px; }
+.ds-label { font-size:10px;color:rgba(255,255,255,0.7);display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em; }
+.ds-input { width:100%;padding:8px 10px;border-radius:3px;border:none;font-size:12px;background:rgba(255,255,255,0.2);color:#fff;font-family:var(--font-sans); }
+.ds-input::placeholder { color:rgba(255,255,255,0.5); }
+.ds-select { width:100%;padding:8px 10px;border-radius:3px;border:none;font-size:12px;background:rgba(255,255,255,0.2);color:#fff;font-family:var(--font-sans); }
+.ds-btn { background:#fff;color:var(--teal-dark);width:100%;padding:10px;border-radius:3px;border:none;font-size:12px;font-weight:500;cursor:pointer;margin-top:4px; }
+.ds-note { font-size:10px;color:rgba(255,255,255,0.55);text-align:center;margin-top:6px; }
+.ds-card { background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px; }
+.ds-card-title { font-size:12px;font-weight:600;color:var(--text);margin-bottom:10px; }
+.ds-item { display:flex;gap:7px;align-items:flex-start;margin-bottom:8px; }
+.ds-item:last-child { margin-bottom:0; }
+.ds-dot { width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:4px; }
+.ds-text { font-size:11px;color:var(--muted);line-height:1.5; }
+.ds-text strong { color:var(--text);font-weight:600; }
+.dl-list { display:flex;flex-direction:column;gap:5px; }
+.dl-link { display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--light-bg);border:1px solid #D4EEEC;border-radius:3px;font-size:12px;color:var(--text);text-decoration:none; }
+.dl-link.active { background:var(--teal);border-color:var(--teal);color:#fff;font-weight:500; }
+.dl-link span { font-size:10px;color:#aaa; }
+.dl-link.active span { color:rgba(255,255,255,0.7); }
+.testi-mini { background:var(--light-bg);border-radius:var(--radius-sm);padding:12px;margin-bottom:10px; }
+.testi-mini:last-child{margin-bottom:0;}
+.tm-q{font-size:11px;color:#555;font-style:italic;line-height:1.6;margin-bottom:7px;}
+.tm-a{font-size:11px;color:var(--text);font-weight:600;}
+.tm-c{font-size:10px;color:#aaa;}
+</style>
+
+<style id="photo-overrides">
+.photo-ph-inner { display: none !important; }
+.photo-ph-corner { display: none !important; }
+.photo-ph { background-size: cover !important; background-position: center !important; }
+
+/* Gold Coast hero background — Surfers Paradise beachfront/highrise */
+.dest-hero-bg {
+  background:
+    linear-gradient(rgba(6,32,48,0.55), rgba(6,32,48,0.55)),
+    url('https://images.unsplash.com/photo-1567591370429-e8f0d45e0b5c?w=1600&q=85&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-beach {
+    background:
+        linear-gradient(rgba(6,30,45,0.35), rgba(6,30,45,0.35)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-highrise {
+    background:
+        linear-gradient(rgba(10,25,40,0.45), rgba(10,25,40,0.45)),
+        url('https://images.unsplash.com/photo-1611095965236-48cb9b3c2db3?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-surfers {
+    background:
+        linear-gradient(rgba(8,28,45,0.4), rgba(8,28,45,0.4)),
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-broadwater {
+    background:
+        linear-gradient(rgba(8,22,35,0.3), rgba(8,22,35,0.3)),
+        url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-boardroom {
+    background:
+        linear-gradient(rgba(10,20,30,0.2), rgba(10,20,30,0.2)),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-navy {
+    background:
+        linear-gradient(rgba(10,20,30,0.3), rgba(10,20,30,0.3)),
+        url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-teal {
+    background:
+        linear-gradient(rgba(10,20,30,0.25), rgba(10,20,30,0.25)),
+        url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.ph-hinterland {
+    background:
+        linear-gradient(rgba(10,22,10,0.3), rgba(10,22,10,0.3)),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.about-strip {
+    background:
+        linear-gradient(rgba(13,34,51,0.93), rgba(7,21,32,0.95)),
+        url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1400&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.cta-banner {
+    background:
+        linear-gradient(rgba(40,168,182,0.93), rgba(59,201,217,0.90)),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80&fit=crop') center/cover no-repeat !important;
+}
+
+.vc-photo {
+    background-size: cover !important;
+    background-position: center !important;
+}
+</style>
+
+<style id="venue-card-final">
+.venue-list { display:flex; flex-direction:column; gap:12px; }
+.venue-card {
+    display:grid;
+    grid-template-columns:140px 1fr;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:#fff;
+    min-height:130px;
+}
+.vc-photo {
+    width:140px;
+    background-size:cover !important;
+    background-position:center !important;
+    flex-shrink:0;
+}
+.vc-body {
+    padding:14px 16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.vc-name { font-size:15px; font-weight:600; color:var(--text); font-family:var(--font-serif); margin-bottom:2px; }
+.vc-area { font-size:12px; color:var(--teal); font-weight:500; margin-bottom:6px; }
+.vc-desc { font-size:12px; color:var(--muted); line-height:1.55; margin-bottom:8px; }
+.vc-bottom { display:flex; align-items:flex-end; justify-content:space-between; }
+.vc-tags { display:flex; gap:5px; flex-wrap:wrap; }
+.vc-tag { font-size:10px; padding:3px 8px; border:1px solid var(--border); border-radius:20px; color:#666; }
+.vc-cap-n { font-size:20px; font-weight:700; color:var(--text); font-family:var(--font-serif); line-height:1; text-align:right; }
+.vc-cap-l { font-size:9px; color:#aaa; text-transform:uppercase; letter-spacing:0.07em; text-align:right; }
+.photo-ph-label, .photo-ph-inner { display:none !important; }
+
+/* Venue card specific photos — Gold Coast */
+.venue-card:nth-child(1) .vc-photo {
+    background:
+        url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.venue-card:nth-child(2) .vc-photo {
+    background:
+        url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.venue-card:nth-child(3) .vc-photo {
+    background:
+        url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+</style>
+
+<style id="area-photo-fix">
+.areas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+.area {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+}
+.area-photo {
+    height: 200px !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.area-body {
+    padding: 14px 16px;
+}
+.area-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    font-family: var(--font-serif);
+    margin-bottom: 4px;
+}
+.area-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 6px;
+}
+.area-tag {
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 500;
+}
+.photo-ph-label, .photo-ph-inner { display: none !important; }
+
+/* Area photos — Gold Coast regions */
+.area:nth-child(1) .area-photo {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.area:nth-child(2) .area-photo {
+    background: url('https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.area:nth-child(3) .area-photo {
+    background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.area:nth-child(4) .area-photo {
+    background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+</style>
+
+<style id="vt-photo-final">
+.venue-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+.vt {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+}
+.vt-photo {
+    height: 200px !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.vt-body {
+    padding: 14px 16px;
+}
+.vt-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+.vt-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
+.vt-count {
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 600;
+}
+.photo-ph-label, .photo-ph-inner { display: none !important; }
+
+/* Venue type photos — Gold Coast */
+.vt:nth-child(1) .vt-photo { background: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(2) .vt-photo { background: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(3) .vt-photo { background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(4) .vt-photo { background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+</style>
+
+<style id="photo-strip-fix">
+.photo-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    height: 320px !important;
+    margin: 20px 0;
+}
+.photo-strip-main {
+    height: 100%;
+    min-height: 320px;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: var(--radius);
+    background:
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85&fit=crop') center/cover no-repeat !important;
+}
+.photo-strip-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    height: 100%;
+}
+.photo-strip-sm {
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: var(--radius);
+    height: 100%;
+}
+.photo-strip-sm:nth-child(1) {
+    background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.photo-strip-sm:nth-child(2) {
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&fit=crop') center/cover no-repeat !important;
+}
+.photo-ph-label, .photo-ph-inner { display: none !important; }
+</style>
+
+<style id="mobile-all">
+/* CVBS — MOBILE STYLES */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0D2233;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 56px; left: 0; right: 0;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 3px solid #3BC9D9;
+  box-shadow: 0 8px 24px rgba(13,34,51,0.15);
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+.mobile-menu a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 15px;
+  color: #0D2233;
+  text-decoration: none;
+  border-bottom: 1px solid #e8f8fa;
+  font-weight: 500;
+}
+.mobile-menu a:hover, .mobile-menu a.active { background: #f0fbfd; color: #3BC9D9; }
+.mobile-menu .mobile-cta {
+  display: block;
+  margin: 16px 24px 20px;
+  padding: 14px 24px;
+  background: #3BC9D9;
+  color: #fff !important;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  border-bottom: none !important;
+}
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+.mobile-overlay.show { display: block; }
+.mobile-menu.open { display: block; }
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  img { max-width: 100% !important; height: auto; }
+  .nav { padding: 0 16px !important; height: 56px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; min-height: 56px !important; }
+  .nav-logo img { height: 28px !important; }
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
+  section, .section { padding: 48px 20px !important; }
+  .section-title { font-size: 22px !important; line-height: 1.3 !important; }
+  .testi-grid, .obj-grid, .myth-grid, .partner-grid, .how-grid, .how-offers-grid, .offers-grid, .rel-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .footer { padding: 44px 20px 24px !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px !important; margin-bottom: 28px !important; }
+  .footer-bar { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 6px !important; font-size: 11px !important; padding-top: 20px !important; border-top: 1px solid rgba(255,255,255,0.1) !important; }
+  section { overflow: hidden !important; }
+  h2 { font-size: 24px !important; line-height: 1.25 !important; }
+  h1 { font-size: 28px !important; line-height: 1.2 !important; }
+  p { font-size: 14px !important; line-height: 1.7 !important; }
+}
+
+@media (max-width: 400px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<style id="goldcoast-mobile-fix">
+@media (max-width: 768px) {
+  .dest-main {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: unset !important;
+  }
+  .dest-sidebar {
+    width: 100% !important;
+    border-left: none !important;
+    border-top: 2px solid #e8f8fa !important;
+    padding: 24px 20px !important;
+  }
+  .dest-content { padding: 24px 20px !important; width: 100% !important; }
+  .photo-strip { height: 140px !important; }
+  .venue-types { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .venue-card {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: unset !important;
+  }
+  .venue-card .vc-photo {
+    width: 100% !important;
+    height: 160px !important;
+  }
+  .areas { grid-template-columns: 1fr !important; }
+  .dest-hero { height: auto !important; min-height: 280px !important; }
+  .dest-hero-content { padding: 28px 20px 32px !important; }
+  .dest-hero h1 { font-size: 28px !important; }
+  .dest-hero-stats { flex-wrap: wrap !important; gap: 16px !important; }
+  .brief-bar { flex-direction: column !important; align-items: flex-start !important; padding: 18px 20px !important; gap: 12px !important; }
+  .trust-bar { padding: 16px 20px !important; flex-wrap: wrap !important; }
+  .trust-item { min-width: 45% !important; padding: 10px !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="logo.png" alt="CVBS" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+    <span style="display:none;font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-0.02em;">CVBS</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="destinations.html" class="active">Destinations</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="results.html">Client results</a>
+    <a href="submit-a-brief.html" class="nav-btn">Submit a brief</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="destinations.html" class="active">Destinations</a>
+  <a href="how-it-works.html">How it works</a>
+  <a href="results.html">Client results</a>
+  <a href="submit-a-brief.html" class="mobile-cta">Submit a brief →</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="destinations.html">Destinations</a>
+  <span class="sep">›</span>
+  <span class="cur">Gold Coast</span>
+</div>
+
+<!-- HERO -->
+<div class="dest-hero">
+  <div class="dest-hero-bg"></div>
+  <!-- Gold Coast skyline SVG illustration -->
+  <svg class="hero-svg" viewBox="0 0 900 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ocean/beach base -->
+    <rect x="0" y="160" width="900" height="60" fill="#062a40" opacity="0.9"/>
+    <!-- Wave suggestion -->
+    <path d="M0 162 Q225 155 450 162 Q675 169 900 162 L900 220 L0 220 Z" fill="#0a3a55" opacity="0.6"/>
+    <!-- Surfers Paradise highrise towers — tall and clustered -->
+    <rect x="340" y="10" width="22" height="170" fill="#0d2233" opacity="0.9"/>
+    <rect x="365" y="25" width="18" height="155" fill="#0d2233" opacity="0.85"/>
+    <rect x="386" y="5" width="26" height="175" fill="#0d2233" opacity="0.9"/>
+    <rect x="415" y="20" width="20" height="160" fill="#0d2233" opacity="0.85"/>
+    <rect x="438" y="30" width="24" height="150" fill="#0d2233" opacity="0.9"/>
+    <rect x="465" y="15" width="18" height="165" fill="#0d2233" opacity="0.8"/>
+    <rect x="486" y="35" width="22" height="145" fill="#0d2233" opacity="0.85"/>
+    <!-- Window lights on towers -->
+    <rect x="344" y="20" width="3" height="3" fill="#3BC9D9" opacity="0.6"/>
+    <rect x="350" y="30" width="3" height="3" fill="#3BC9D9" opacity="0.5"/>
+    <rect x="344" y="40" width="3" height="3" fill="#3BC9D9" opacity="0.4"/>
+    <rect x="390" y="15" width="3" height="3" fill="#3BC9D9" opacity="0.7"/>
+    <rect x="397" y="28" width="3" height="3" fill="#3BC9D9" opacity="0.5"/>
+    <rect x="390" y="42" width="3" height="3" fill="#3BC9D9" opacity="0.6"/>
+    <rect x="442" y="38" width="3" height="3" fill="#3BC9D9" opacity="0.5"/>
+    <rect x="448" y="50" width="3" height="3" fill="#3BC9D9" opacity="0.6"/>
+    <!-- Broadwater / lower-rise left side -->
+    <rect x="80" y="90" width="14" height="90" fill="#0d2233" opacity="0.7"/>
+    <rect x="100" y="75" width="18" height="105" fill="#0d2233" opacity="0.75"/>
+    <rect x="122" y="95" width="12" height="85" fill="#0d2233" opacity="0.65"/>
+    <rect x="138" y="80" width="16" height="100" fill="#0d2233" opacity="0.7"/>
+    <rect x="158" y="100" width="20" height="80" fill="#0d2233" opacity="0.65"/>
+    <!-- Right side — Broadbeach towers -->
+    <rect x="600" y="55" width="20" height="125" fill="#0d2233" opacity="0.8"/>
+    <rect x="624" y="40" width="24" height="140" fill="#0d2233" opacity="0.85"/>
+    <rect x="652" y="60" width="18" height="120" fill="#0d2233" opacity="0.75"/>
+    <rect x="674" y="45" width="22" height="135" fill="#0d2233" opacity="0.8"/>
+    <rect x="700" y="70" width="16" height="110" fill="#0d2233" opacity="0.7"/>
+    <rect x="720" y="85" width="20" height="95" fill="#0d2233" opacity="0.65"/>
+    <!-- Palm tree silhouettes -->
+    <line x1="200" y1="180" x2="200" y2="140" stroke="#061a28" stroke-width="3"/>
+    <ellipse cx="200" cy="135" rx="14" ry="8" fill="#061a28" opacity="0.8"/>
+    <line x1="560" y1="180" x2="560" y2="138" stroke="#061a28" stroke-width="3"/>
+    <ellipse cx="560" cy="132" rx="14" ry="8" fill="#061a28" opacity="0.8"/>
+    <line x1="800" y1="180" x2="800" y2="142" stroke="#061a28" stroke-width="3"/>
+    <ellipse cx="800" cy="136" rx="12" ry="7" fill="#061a28" opacity="0.7"/>
+  </svg>
+  <div class="dest-hero-water"></div>
+  <div class="dest-hero-grad"></div>
+  <div class="dest-hero-content">
+    <div class="dest-eyebrow">
+      <div class="dest-ey-line"></div>
+      <div class="dest-ey-text">Queensland Destinations</div>
+    </div>
+    <h1>Conference venues in <em>Gold Coast</em></h1>
+    <p>Australia's events capital. Beachfront conference hotels, purpose-built convention facilities, and hinterland retreats — all with exceptional weather and world-class infrastructure year-round.</p>
+    <div class="dest-hero-stats">
+      <div>
+        <div class="dhs-n">60+</div>
+        <div class="dhs-l">Vetted venues</div>
+      </div>
+      <div>
+        <div class="dhs-n">35yr</div>
+        <div class="dhs-l">Local relationships</div>
+      </div>
+      <div>
+        <div class="dhs-n">48hr</div>
+        <div class="dhs-l">Shortlist turnaround</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BRIEF BAR -->
+<div class="brief-bar">
+  <div>
+    <div class="bb-text">Ready to find your Gold Coast venue?</div>
+    <div class="bb-sub">Submit a brief — we'll deliver a shortlist within 48 hours. Free service, no obligation.</div>
+  </div>
+  <a href="submit-a-brief.html" class="btn btn-white" style="white-space:nowrap;">Submit a brief →</a>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-n">35</div>
+    <div class="trust-l">Years finding venues</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-n">60+</div>
+    <div class="trust-l">GC venue relationships</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-n">Free</div>
+    <div class="trust-l">Always, for event bookers</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-n">48hr</div>
+    <div class="trust-l">Shortlist guarantee</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-n">Better</div>
+    <div class="trust-l">Rates than going direct</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT + SIDEBAR -->
+<div class="dest-main">
+  <div class="dest-content">
+
+    <!-- INTRO -->
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Gold Coast overview</div></div>
+    <h2 class="section-title">Why book your conference <em>on the Gold Coast</em></h2>
+
+    <!-- PHOTO STRIP -->
+    <div class="photo-strip">
+      <div class="photo-strip-main photo-ph ph-surfers"></div>
+      <div class="photo-strip-right">
+        <div class="photo-strip-sm photo-ph ph-broadwater"></div>
+        <div class="photo-strip-sm photo-ph ph-boardroom"></div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);line-height:1.8;">CVBS has been sourcing Gold Coast conference venues since 1989. We have direct relationships with hotel conference managers across Surfers Paradise, Broadbeach, and the northern Gold Coast, which means better rates and priority availability than going direct. The Gold Coast's purpose-built MICE infrastructure — combined with year-round sunshine and unmatched leisure options — makes it one of Australia's most popular conference destinations.</p>
+
+    <div class="divider"></div>
+
+    <!-- VENUE TYPES -->
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Venue types</div></div>
+    <h2 class="section-title">What's available <em>on the Gold Coast</em></h2>
+    <div class="venue-types">
+      <div class="vt">
+        <div class="vt-photo photo-ph ph-highrise"></div>
+        <div class="vt-body">
+          <div class="vt-name">Beachfront hotel conference centres</div>
+          <div class="vt-desc">Full-service hotels with ocean views, dedicated conference floors, AV, and catering. Best for 50–500 delegates.</div>
+          <div class="vt-count">25+ options</div>
+        </div>
+      </div>
+      <div class="vt">
+        <div class="vt-photo photo-ph ph-teal"></div>
+        <div class="vt-body">
+          <div class="vt-name">Convention & purpose-built facilities</div>
+          <div class="vt-desc">Large-scale venues including GCCEC for major conventions, product launches and exhibitions. 500–6,000 delegates.</div>
+          <div class="vt-count">8+ options</div>
+        </div>
+      </div>
+      <div class="vt">
+        <div class="vt-photo photo-ph ph-beach"></div>
+        <div class="vt-body">
+          <div class="vt-name">Broadbeach resort venues</div>
+          <div class="vt-desc">Premium integrated resort facilities with casino, multiple dining and accommodation options. Ideal for corporate incentives.</div>
+          <div class="vt-count">10+ options</div>
+        </div>
+      </div>
+      <div class="vt">
+        <div class="vt-photo photo-ph ph-hinterland"></div>
+        <div class="vt-body">
+          <div class="vt-name">Hinterland retreats</div>
+          <div class="vt-desc">Rainforest and rural properties in the Hinterland — Tamborine Mountain and O'Reilly's for immersive off-site experiences.</div>
+          <div class="vt-count">12+ options</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FEATURED VENUES -->
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Featured venues</div></div>
+    <h2 class="section-title">Gold Coast venues <em>we recommend</em></h2>
+    <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:4px;">A selection of the Gold Coast properties we work with regularly. Submit a brief and we'll match the right venue to your specific brief, group size and budget.</p>
+
+    <div class="venue-list">
+      <div class="venue-card">
+        <div class="vc-photo photo-ph ph-teal"></div>
+        <div class="vc-body">
+          <div>
+            <div class="vc-name">The Star Gold Coast</div>
+            <div class="vc-area">Broadbeach</div>
+            <div class="vc-desc">Integrated resort with over 30 event spaces, multiple ballrooms, and 596 hotel rooms. Exceptional for incentive groups and gala dinners.</div>
+          </div>
+          <div class="vc-bottom">
+            <div class="vc-tags">
+              <span class="vc-tag">Gala dinners</span>
+              <span class="vc-tag">Incentives</span>
+              <span class="vc-tag">Conferences</span>
+            </div>
+            <div>
+              <div class="vc-cap-n">2,000</div>
+              <div class="vc-cap-l">Max delegates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <div class="vc-photo photo-ph ph-navy"></div>
+        <div class="vc-body">
+          <div>
+            <div class="vc-name">Gold Coast Convention & Exhibition Centre</div>
+            <div class="vc-area">Broadbeach</div>
+            <div class="vc-desc">Queensland's largest regional convention centre. 30+ flexible event spaces, dedicated AV and catering teams, adjacent to major hotels.</div>
+          </div>
+          <div class="vc-bottom">
+            <div class="vc-tags">
+              <span class="vc-tag">Conventions</span>
+              <span class="vc-tag">Exhibitions</span>
+              <span class="vc-tag">Large groups</span>
+            </div>
+            <div>
+              <div class="vc-cap-n">6,000</div>
+              <div class="vc-cap-l">Max delegates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <div class="vc-photo photo-ph ph-broadwater"></div>
+        <div class="vc-body">
+          <div>
+            <div class="vc-name">Sheraton Grand Mirage</div>
+            <div class="vc-area">Main Beach</div>
+            <div class="vc-desc">Lagoon resort setting with beachfront conference facilities, 295 rooms and suites. Outstanding for board retreats and mid-size conferences.</div>
+          </div>
+          <div class="vc-bottom">
+            <div class="vc-tags">
+              <span class="vc-tag">Board retreats</span>
+              <span class="vc-tag">Beachfront</span>
+              <span class="vc-tag">Residential</span>
+            </div>
+            <div>
+              <div class="vc-cap-n">500</div>
+              <div class="vc-cap-l">Max delegates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">We work with 60+ Gold Coast venues not listed here. Submit a brief and we'll match properties to your specific requirements — group size, budget, dates, and format.</div>
+
+    <div class="divider"></div>
+
+    <!-- AREA GUIDE -->
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Area guide</div></div>
+    <h2 class="section-title">Gold Coast <em>precincts & surrounds</em></h2>
+    <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:4px;">From Surfers Paradise's iconic beachfront strip to the lush hinterland, the Gold Coast offers remarkably diverse venue options within a compact geography.</p>
+
+    <div class="areas">
+      <div class="area">
+        <div class="area-photo photo-ph ph-beach"></div>
+        <div class="area-body">
+          <div class="area-name">Surfers Paradise</div>
+          <div class="area-desc">The iconic highrise strip. Central, walkable, buzzing. Excellent for delegates wanting entertainment on their doorstep after sessions.</div>
+          <span class="area-tag">Best for: large conferences, groups wanting vibrancy</span>
+        </div>
+      </div>
+      <div class="area">
+        <div class="area-photo photo-ph ph-broadwater"></div>
+        <div class="area-body">
+          <div class="area-name">Broadbeach</div>
+          <div class="area-desc">Home to GCCEC and The Star. Most purpose-built MICE infrastructure in the region. Polished, walkable, with excellent dining.</div>
+          <span class="area-tag">Best for: conventions, exhibitions, gala dinners</span>
+        </div>
+      </div>
+      <div class="area">
+        <div class="area-photo photo-ph ph-hinterland"></div>
+        <div class="area-body">
+          <div class="area-name">Gold Coast Hinterland</div>
+          <div class="area-desc">45 mins from the coast. Rainforest retreats, O'Reilly's, and Tamborine Mountain. Exceptional for leadership offsites and immersive programs.</div>
+          <span class="area-tag">Best for: retreats, leadership programs, immersive offsites</span>
+        </div>
+      </div>
+      <div class="area">
+        <div class="area-photo photo-ph ph-highrise"></div>
+        <div class="area-body">
+          <div class="area-name">Main Beach & Sanctuary Cove</div>
+          <div class="area-desc">Quieter, upscale beachfront and waterfront properties. Ideal for executive groups who want quality without the hustle of the main strip.</div>
+          <span class="area-tag">Best for: executive retreats, incentive groups, board events</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FAQs -->
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Common questions</div></div>
+    <h2 class="section-title">Gold Coast venue <em>FAQs</em></h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">How far in advance should I book a Gold Coast venue?</div>
+        <div class="faq-a">For 100+ delegates, 9–12 months ahead. The Gold Coast is heavily booked during school holidays, Commonwealth Games legacy periods, and Q1/Q4. For smaller groups, 3–6 months is usually sufficient. We regularly find good last-minute options — submit a brief and we'll assess availability immediately.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does a Gold Coast conference venue cost per delegate?</div>
+        <div class="faq-a">Day delegate rates (DDR) typically range from $90–$165 per person per day, including room hire, AV, and catering. Residential packages range from $260–$480+ per person. Beachfront properties carry a premium; hinterland venues tend to offer better value per dollar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the Gold Coast better than Brisbane for a conference?</div>
+        <div class="faq-a">It depends on your group. The Gold Coast wins on atmosphere, leisure activities, and delegate engagement — people are more energised at the beach. Brisbane is better for domestically-focused corporate events where flying time is a concern. We service both and can help you weigh up the tradeoffs for your specific brief.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you beat the rate I'd get direct?</div>
+        <div class="faq-a">In most cases, yes. Our collective volume gives us negotiating leverage that individual bookers rarely achieve. Clients consistently confirm our rates match or beat going direct — and we handle all the negotiation and administration at no cost to you.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you cover venues outside the main Gold Coast strip?</div>
+        <div class="faq-a">Yes — all of Greater Gold Coast including Sanctuary Cove, Coomera, Tamborine Mountain, and the broader hinterland. If you're open to combining beach and hinterland elements across multiple days, tell us in your brief and we'll include split-location options.</div>
+      </div>
+    </div>
+
+  </div><!-- /dest-content -->
+
+  <!-- SIDEBAR -->
+  <div class="dest-sidebar">
+    <div class="ds-brief">
+      <div class="ds-brief-title">Find a Gold Coast venue</div>
+      <div class="ds-brief-sub">Shortlist within 48 hours. Free service.</div>
+      <div class="ds-field"><span class="ds-label">Event type</span><select class="ds-select"><option>Conference</option><option>Board retreat</option><option>Product launch</option><option>Incentive event</option><option>Gala dinner</option></select></div>
+      <div class="ds-field"><span class="ds-label">Delegates</span><select class="ds-select"><option>Under 20</option><option>20–50</option><option>50–100</option><option>100–200</option><option>200+</option></select></div>
+      <div class="ds-field"><span class="ds-label">Approx. dates</span><input class="ds-input" type="text" placeholder="e.g. October 2026" /></div>
+      <div class="ds-field"><span class="ds-label">Your email</span><input class="ds-input" type="email" placeholder="your@email.com.au" /></div>
+      <button class="ds-btn">Submit my Gold Coast brief →</button>
+      <div class="ds-note">Free · No obligation · 48hr response</div>
+    </div>
+
+    <div class="ds-card">
+      <div class="ds-card-title">Why use CVBS for Gold Coast</div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>35 years</strong> sourcing Gold Coast venues</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>Direct relationships</strong> with 60+ venue managers</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>Better rates</strong>. Our venue volume gives us leverage you can't get direct</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>One brief</strong>, we handle all research and negotiation</div></div>
+    </div>
+
+    <div class="ds-card">
+      <div class="ds-card-title">What clients say</div>
+      <div class="testi-mini"><div class="tm-q">"CVBS found us a beachfront venue that was completely off our radar — and came in under budget. The delegates were blown away."</div><div class="tm-a">Michael T.</div><div class="tm-c">Corporate Events Manager, QLD · Long-term client</div></div>
+      <div class="testi-mini"><div class="tm-q">"I've booked Gold Coast conferences through CVBS for eight years. The relationships they have with the major hotel groups are genuinely unmatched."</div><div class="tm-a">Janelle K.</div><div class="tm-c">EA to CEO, QLD · 8+ year client</div></div>
+    </div>
+
+    <div class="ds-card">
+      <div class="ds-card-title">Other destinations</div>
+      <div class="dl-list">
+        <a href="sydney.html" class="dl-link">Sydney <span>200+ venues</span></a>
+        <a href="melbourne.html" class="dl-link">Melbourne <span>170+ venues</span></a>
+        <a href="brisbane.html" class="dl-link">Brisbane <span>90+ venues</span></a>
+        <a href="goldcoast.html" class="dl-link active">Gold Coast <span>60+ venues</span></a>
+        <a href="canberra.html" class="dl-link">Canberra <span>45+ venues</span></a>
+        <a href="destinations.html" class="dl-link">All destinations →</a>
+      </div>
+    </div>
+
+    <div class="ds-card" style="background:var(--light-bg);">
+      <div class="ds-card-title">Prefer to talk?</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px;">Karen and Anthony are happy to discuss your Gold Coast brief.</div>
+      <div style="font-size:15px;color:var(--teal);font-weight:600;">+61 402 033 861</div>
+      <div style="font-size:11px;color:#aaa;margin-top:3px;">Mon–Fri, 9am–5pm AEST</div>
+    </div>
+  </div><!-- /dest-sidebar -->
+</div>
+
+<!-- BOTTOM CTA -->
+<div style="background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
+  <div>
+    <div style="font-size:28px;font-weight:500;color:#fff;font-family:var(--font-serif);line-height:1.2;margin-bottom:8px;">Ready to find your <em style="font-style:italic;color:var(--teal);">Gold Coast venue?</em></div>
+    <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65;max-width:340px;">Submit a brief and receive a fully costed shortlist within 48 hours. No cost, no obligation.</p>
+  </div>
+  <div>
+    <a href="submit-a-brief.html" class="btn btn-primary" style="font-size:14px;padding:13px 28px;">Submit your brief →</a>
+    <div style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px;">Free service · 48hr response guaranteed</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="logo.png" alt="CVBS" /></div>
+      <p class="footer-tagline">Australia's most trusted venue finding service, since 1989. Not because we've been doing it longest, but because our clients keep coming back.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="services.html">Conference venue finding</a>
+      <a href="services.html">Group accommodation</a>
+      <a href="services.html">Product launches & events</a>
+      <a href="services.html">Corporate relocation</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Destinations</div>
+      <a href="sydney.html">Sydney</a>
+      <a href="melbourne.html">Melbourne</a>
+      <a href="brisbane.html">Brisbane</a>
+      <a href="goldcoast.html">Gold Coast</a>
+      <a href="destinations.html">All destinations →</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="about.html">About us</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="offers.html">Offers</a>
+      <a href="how-we-are-paid.html">How we're paid</a>
+      <a href="results.html">Client results</a>
+      <a href="blog-index.html">Blog</a>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p>© 2026 Conference Venues &amp; Booking Services · conferencevenues.com.au · +61 402 033 861 · info@conferencevenues.com.au</p>
+    <div class="footer-bar-links">
+      <a href="#">Privacy policy</a>
+      <a href="offers.html">Offers</a>
+      <a href="how-we-are-paid.html">How we're paid</a>
+      <a href="submit-a-brief.html">Submit a brief</a>
+    </div>
+  </div>
+</footer>
+
+<script id="hamburger-js">
+(function(){
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  var overlay = document.getElementById('mobileOverlay');
+  if (!btn) return;
+  function closeMenu() {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    overlay.classList.remove('show');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+  btn.addEventListener('click', function(){
+    var isOpen = menu.classList.contains('open');
+    if (isOpen) { closeMenu(); }
+    else {
+      btn.classList.add('open');
+      menu.classList.add('open');
+      overlay.classList.add('show');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+  overlay.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  // Mark active nav link
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function(a){
+    if (a.getAttribute('href') && path.indexOf(a.getAttribute('href')) !== -1 && a.getAttribute('href') !== 'index.html') {
+      a.classList.add('active');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

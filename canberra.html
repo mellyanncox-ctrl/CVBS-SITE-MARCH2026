@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference venues in Canberra ACT | CVBS, Worldwide Venue Finding Solutions</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --teal: #3BC9D9; --teal-dark: #28A8B6; --navy: #0D2233; --navy-deep: #071520;
+  --text: #0D1F2D; --muted: #555; --light-bg: #F7FDFE; --border: #C8EEF3;
+  --border-light: #EEF8FA; --accent-bg: #E4F9FC; --accent-border: #B8EEF4;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius: 8px; --radius-sm: 4px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--text); line-height: 1.6; background: #fff; }
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+.nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 40px; height: 68px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow); }
+.nav-logo { display: flex; align-items: center; }
+.nav-logo img { height: 36px; width: auto; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a { color: var(--text); font-size: 13px; text-decoration: none; opacity: 0.65; transition: opacity 0.15s; }
+.nav-links a:hover { opacity: 1; }
+.nav-links a.active { opacity: 1; color: var(--teal); font-weight: 500; }
+.nav-btn { background: var(--teal) !important; color: #fff !important; opacity: 1 !important; padding: 9px 20px; border-radius: var(--radius-sm); font-weight: 500; font-size: 13px !important; }
+.nav-btn:hover { background: var(--teal-dark) !important; text-decoration: none !important; }
+.breadcrumb { background: var(--light-bg); border-bottom: 1px solid #D4EEEC; padding: 11px 48px; display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { font-size: 12px; color: var(--teal); }
+.breadcrumb.sep { font-size: 12px; color: #ccc; }
+.breadcrumb.cur { font-size: 12px; color: #888; }
+.footer { background: var(--navy-deep); padding: 48px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+.footer-logo { margin-bottom: 14px; }
+.footer-logo img { height: 32px; opacity: 0.8; }
+.footer-tagline { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.65; max-width: 240px; }
+.footer-col-title { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+.footer-col a:hover { color: var(--teal); text-decoration: none; }
+.footer-bar { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+.footer-bar p { font-size: 11px; color: rgba(255,255,255,0.25); }
+.footer-bar-links { display: flex; gap: 20px; }
+.footer-bar-links a { font-size: 11px; color: rgba(255,255,255,0.3); }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.eyebrow-line { width: 24px; height: 1.5px; background: var(--teal); flex-shrink: 0; }
+.eyebrow-text { font-size: 10px; color: var(--teal); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; }
+.section-title { font-size: 30px; font-weight: 500; color: var(--text); font-family: var(--font-serif); line-height: 1.2; margin-bottom: 10px; }
+.section-title em { font-style: italic; color: var(--teal); }
+.btn { display: inline-block; padding: 12px 28px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; cursor: pointer; border: none; transition: all 0.15s; text-decoration: none; }
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-dark); text-decoration: none; color: #fff; }
+.btn-white { background: #fff; color: var(--teal-dark); }
+.trust-bar { background: var(--navy); padding: 20px 48px; display: flex; }
+.trust-item { flex: 1; text-align: center; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.08); }
+.trust-item:last-child { border-right: none; }
+.trust-n { font-size: 26px; font-weight: 500; color: var(--teal); font-family: var(--font-serif); line-height: 1; margin-bottom: 4px; }
+.trust-l { font-size: 11px; color: rgba(255,255,255,0.4); }
+.divider { height: 1px; background: var(--border-light); margin: 32px 0; }
+.note-box { background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: var(--radius-sm); padding: 14px 18px; font-size: 12px; color: var(--teal-dark); line-height: 1.65; }
+.photo-ph { border-radius: var(--radius); overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+.photo-ph-inner { display: none !important; }
+.dest-hero { position:relative;height:360px;overflow:hidden;display:flex;align-items:flex-end; }
+.dest-hero-bg { position:absolute;inset:0; }
+.hero-svg { position:absolute;bottom:60px;left:0;right:0;width:100%;height:220px; }
+.dest-hero-water { position:absolute;bottom:0;left:0;right:0;height:60px;opacity:0.8; }
+.dest-hero-grad { position:absolute;inset:0; }
+.dest-hero-content { position:relative;z-index:2;padding:40px 48px;width:100%; }
+.dest-eyebrow { display:flex;align-items:center;gap:10px;margin-bottom:12px; }
+.dest-ey-line { width:24px;height:1.5px;background:var(--teal); }
+.dest-ey-text { font-size:10px;color:var(--teal);text-transform:uppercase;letter-spacing:0.12em;font-weight:500; }
+.dest-hero h1 { font-size:44px;font-weight:500;color:#fff;font-family:var(--font-serif);line-height:1.1;margin-bottom:10px; }
+.dest-hero h1 em { font-style:italic;color:var(--teal); }
+.dest-hero p { font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;max-width:480px;margin-bottom:20px; }
+.dest-hero-stats { display:flex;gap:28px; }
+.dhs-n { font-size:24px;font-weight:500;color:var(--teal);font-family:var(--font-serif);line-height:1; }
+.dhs-l { font-size:10px;color:rgba(255,255,255,0.5);margin-top:3px; }
+.brief-bar { background:var(--teal);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;gap:20px; }
+.bb-text { font-size:14px;color:#fff;font-weight:500; }
+.bb-sub { font-size:12px;color:rgba(255,255,255,0.78);margin-top:2px; }
+.dest-main { display:grid;grid-template-columns:1fr 260px;gap:0; }
+.dest-content { padding:40px 48px;background:#fff;border-right:1px solid var(--border); }
+.dest-sidebar { padding:28px 22px;background:var(--light-bg); }
+.photo-strip { display:grid;grid-template-columns:1fr 1fr;gap:12px;height:320px !important;margin:20px 0; }
+.photo-strip-main { height:100%;background-size:cover !important;background-position:center !important;border-radius:var(--radius); }
+.photo-strip-right { display:grid;grid-template-rows:1fr 1fr;gap:12px;height:100%; }
+.photo-strip-sm { background-size:cover !important;background-position:center !important;border-radius:var(--radius);height:100%; }
+.venue-types { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px; }
+.vt { border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff; }
+.vt-photo { height:200px !important;background-size:cover !important;background-position:center !important; }
+.vt-body { padding:14px 16px; }
+.vt-name { font-size:14px;font-weight:600;color:var(--text);margin-bottom:5px; }
+.vt-desc { font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:8px; }
+.vt-count { font-size:11px;color:var(--teal);font-weight:600; }
+.venue-list { display:flex;flex-direction:column;gap:12px;margin:18px 0; }
+.venue-card { background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:140px 1fr;min-height:130px; }
+.vc-photo { width:140px;background-size:cover !important;background-position:center !important;flex-shrink:0; }
+.vc-body { padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between; }
+.vc-name { font-size:15px;font-weight:600;color:var(--text);font-family:var(--font-serif);margin-bottom:2px; }
+.vc-area { font-size:12px;color:var(--teal);font-weight:500;margin-bottom:6px; }
+.vc-desc { font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:8px; }
+.vc-bottom { display:flex;align-items:flex-end;justify-content:space-between; }
+.vc-tags { display:flex;gap:5px;flex-wrap:wrap; }
+.vc-tag { font-size:10px;padding:3px 8px;border:1px solid var(--border);border-radius:20px;color:#666; }
+.vc-cap-n { font-size:20px;font-weight:700;color:var(--text);font-family:var(--font-serif);line-height:1;text-align:right; }
+.vc-cap-l { font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:0.07em;text-align:right; }
+.areas { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px; }
+.area { border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff; }
+.area-photo { height:200px !important;background-size:cover !important;background-position:center !important; }
+.area-body { padding:14px 16px; }
+.area-name { font-size:15px;font-weight:600;color:var(--text);font-family:var(--font-serif);margin-bottom:4px; }
+.area-desc { font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:6px; }
+.area-tag { font-size:11px;color:var(--teal);font-weight:500; }
+.faq { display:flex;flex-direction:column;gap:8px;margin-top:14px; }
+.faq-item { border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff; }
+.faq-q { padding:13px 16px;font-size:13px;font-weight:500;color:var(--text);display:flex;justify-content:space-between; }
+.faq-q::after { content:"+";color:var(--teal);font-size:18px;font-weight:400;flex-shrink:0;margin-left:10px; }
+.faq-a { padding:0 16px 12px;font-size:12px;color:#666;line-height:1.75; }
+.ds-brief { background:var(--teal);border-radius:var(--radius);padding:20px;margin-bottom:16px; }
+.ds-brief-title { font-size:14px;font-weight:500;color:#fff;font-family:var(--font-serif);margin-bottom:6px; }
+.ds-brief-sub { font-size:11px;color:rgba(255,255,255,0.78);margin-bottom:14px;line-height:1.5; }
+.ds-field { margin-bottom:10px; }
+.ds-label { font-size:10px;color:rgba(255,255,255,0.7);display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em; }
+.ds-input { width:100%;padding:8px 10px;border-radius:3px;border:none;font-size:12px;background:rgba(255,255,255,0.2);color:#fff;font-family:var(--font-sans); }
+.ds-input::placeholder { color:rgba(255,255,255,0.5); }
+.ds-select { width:100%;padding:8px 10px;border-radius:3px;border:none;font-size:12px;background:rgba(255,255,255,0.2);color:#fff;font-family:var(--font-sans); }
+.ds-btn { background:#fff;color:var(--teal-dark);width:100%;padding:10px;border-radius:3px;border:none;font-size:12px;font-weight:500;cursor:pointer;margin-top:4px; }
+.ds-note { font-size:10px;color:rgba(255,255,255,0.55);text-align:center;margin-top:6px; }
+.ds-card { background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px; }
+.ds-card-title { font-size:12px;font-weight:600;color:var(--text);margin-bottom:10px; }
+.ds-item { display:flex;gap:7px;align-items:flex-start;margin-bottom:8px; }
+.ds-item:last-child { margin-bottom:0; }
+.ds-dot { width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:4px; }
+.ds-text { font-size:11px;color:var(--muted);line-height:1.5; }
+.ds-text strong { color:var(--text);font-weight:600; }
+.dl-list { display:flex;flex-direction:column;gap:5px; }
+.dl-link { display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--light-bg);border:1px solid #D4EEEC;border-radius:3px;font-size:12px;color:var(--text);text-decoration:none; }
+.dl-link.active { background:var(--teal);border-color:var(--teal);color:#fff;font-weight:500; }
+.dl-link span { font-size:10px;color:#aaa; }
+.dl-link.active span { color:rgba(255,255,255,0.7); }
+.testi-mini { background:var(--light-bg);border-radius:var(--radius-sm);padding:12px;margin-bottom:10px; }
+.testi-mini:last-child { margin-bottom:0; }
+.tm-q { font-size:11px;color:#555;font-style:italic;line-height:1.6;margin-bottom:7px; }
+.tm-a { font-size:11px;color:var(--text);font-weight:600; }
+.tm-c { font-size:10px;color:#aaa; }
+.hamburger { display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:1001; }
+.hamburger span { display:block;width:24px;height:2px;background:#0D2233;border-radius:2px;transition:all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.mobile-menu { display:none;position:fixed;top:56px;left:0;right:0;background:#fff;z-index:1000;border-bottom:3px solid #3BC9D9;box-shadow:0 8px 24px rgba(13,34,51,0.15);max-height:calc(100vh - 56px);overflow-y:auto; }
+.mobile-menu a { display:block;padding:14px 24px;font-size:15px;color:#0D2233;text-decoration:none;border-bottom:1px solid #e8f8fa;font-weight:500; }
+.mobile-menu a:hover,.mobile-menu a.active { background:#f0fbfd;color:#3BC9D9; }
+.mobile-menu .mobile-cta { display:block;margin:16px 24px 20px;padding:14px 24px;background:#3BC9D9;color:#fff !important;text-align:center;border-radius:6px;font-weight:700;border-bottom:none !important; }
+.mobile-overlay { display:none;position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:999; }
+.mobile-overlay.show { display:block; }
+.mobile-menu.open { display:block; }
+@media (max-width:768px) {
+  html,body { overflow-x:hidden; }
+  .nav { padding:0 16px !important;height:56px !important;min-height:56px !important; }
+  .nav-links { display:none !important; }
+  .hamburger { display:flex !important; }
+  .dest-main { display:flex !important;flex-direction:column !important; }
+  .dest-sidebar { width:100% !important;border-left:none !important;border-top:2px solid #e8f8fa !important;padding:24px 20px !important; }
+  .dest-content { padding:24px 20px !important; }
+  .dest-hero { height:auto !important;min-height:280px !important; }
+  .dest-hero-content { padding:28px 20px 32px !important; }
+  .dest-hero h1 { font-size:28px !important; }
+  .dest-hero-stats { flex-wrap:wrap !important;gap:16px !important; }
+  .brief-bar { flex-direction:column !important;align-items:flex-start !important;padding:18px 20px !important;gap:12px !important; }
+  .trust-bar { padding:16px 20px !important;flex-wrap:wrap !important; }
+  .trust-item { min-width:45% !important;padding:10px !important;border-right:none !important;border-bottom:1px solid rgba(255,255,255,0.08) !important; }
+  .photo-strip { height:140px !important; }
+  .venue-types { grid-template-columns:1fr 1fr !important;gap:8px !important; }
+  .venue-card { display:flex !important;flex-direction:column !important; }
+  .venue-card .vc-photo { width:100% !important;height:160px !important; }
+  .areas { grid-template-columns:1fr !important; }
+  .footer { padding:44px 20px 24px !important; }
+  .footer-grid { grid-template-columns:1fr 1fr !important;gap:24px !important;margin-bottom:28px !important; }
+  .footer-bar { flex-direction:column !important;align-items:center !important;text-align:center !important;gap:6px !important; }
+  h2 { font-size:24px !important; }
+  h1 { font-size:28px !important; }
+}
+</style>
+<style id="photos">
+.dest-hero-bg {
+  background: linear-gradient(rgba(8,18,28,0.6),rgba(8,18,28,0.6)),
+  url('https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1600&q=85&fit=crop') center/cover no-repeat !important;
+}
+.dest-hero-water { background:linear-gradient(180deg,#0d2030,#081520); }
+.dest-hero-grad { background:linear-gradient(to top,rgba(8,18,28,0.92) 0%,rgba(8,18,28,0.4) 55%,transparent 100%); }
+.photo-strip-main { background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=85&fit=crop') center/cover no-repeat !important; }
+.photo-strip-sm:nth-child(1) { background:url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.photo-strip-sm:nth-child(2) { background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(1) .vt-photo { background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(2) .vt-photo { background:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(3) .vt-photo { background:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.vt:nth-child(4) .vt-photo { background:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&q=80&fit=crop') center/cover no-repeat !important; }
+.venue-card:nth-child(1) .vc-photo { background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.venue-card:nth-child(2) .vc-photo { background:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.venue-card:nth-child(3) .vc-photo { background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.area:nth-child(1) .area-photo { background:url('https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.area:nth-child(2) .area-photo { background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.area:nth-child(3) .area-photo { background:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.area:nth-child(4) .area-photo { background:url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="logo.png" alt="CVBS" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+    <span style="display:none;font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-0.02em;">CVBS</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="destinations.html" class="active">Destinations</a>
+    <a href="how-it-works.html">How it works</a><a href="results.html">Client results</a>
+    <a href="submit-a-brief.html" class="nav-btn">Submit a brief</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="destinations.html" class="active">Destinations</a>
+  <a href="how-it-works.html">How it works</a><a href="results.html">Client results</a>
+  <a href="submit-a-brief.html" class="mobile-cta">Submit a brief →</a>
+</div>
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="destinations.html">Destinations</a><span class="sep">›</span>
+  <span class="cur">Canberra</span>
+</div>
+
+<div class="dest-hero">
+  <div class="dest-hero-bg"></div>
+  <svg class="hero-svg" viewBox="0 0 900 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lake Burley Griffin -->
+    <path d="M0 185 Q200 172 450 180 Q680 188 900 175 L900 220 L0 220Z" fill="#0a1828" opacity="0.9"/>
+    <ellipse cx="450" cy="185" rx="280" ry="22" fill="#0d2035" opacity="0.5"/>
+    <!-- Captain Cook Memorial Jet (thin vertical) -->
+    <rect x="448" y="80" width="4" height="105" fill="#3BC9D9" opacity="0.5"/>
+    <ellipse cx="450" cy="80" rx="8" ry="4" fill="#3BC9D9" opacity="0.4"/>
+    <!-- Parliament House (low, wide building on hill) -->
+    <rect x="300" y="130" width="300" height="55" fill="#0d2233" opacity="0.8"/>
+    <!-- Parliament flagpole on roof -->
+    <rect x="448" y="95" width="4" height="35" fill="#0d2233" opacity="0.9"/>
+    <!-- Parliament wings -->
+    <rect x="250" y="148" width="400" height="30" fill="#0d2233" opacity="0.7"/>
+    <!-- Grass mound / hill suggestion -->
+    <ellipse cx="450" cy="135" rx="220" ry="25" fill="#0d2233" opacity="0.4"/>
+    <!-- Telstra Tower on Black Mountain (left) -->
+    <rect x="108" y="50" width="8" height="145" fill="#0d2233" opacity="0.8"/>
+    <ellipse cx="112" cy="50" rx="18" ry="14" fill="#0d2233" opacity="0.85"/>
+    <rect x="106" y="36" width="12" height="22" fill="#0d2233" opacity="0.9"/>
+    <rect x="109" y="20" width="6" height="20" fill="#0d2233" opacity="0.85"/>
+    <!-- Background mountains/ridgeline -->
+    <path d="M0 160 Q100 130 200 148 Q300 130 400 145 Q500 135 600 148 Q700 132 800 145 Q850 138 900 148 L900 220 L0 220Z" fill="#0a1525" opacity="0.5"/>
+    <!-- City Hill / Civic towers -->
+    <rect x="620" y="100" width="20" height="100" fill="#0d2233" opacity="0.75"/>
+    <rect x="645" y="115" width="16" height="85" fill="#0d2233" opacity="0.7"/>
+    <rect x="665" y="105" width="18" height="95" fill="#0d2233" opacity="0.72"/>
+    <rect x="687" y="120" width="14" height="80" fill="#0d2233" opacity="0.65"/>
+    <!-- Window lights -->
+    <rect x="623" y="108" width="3" height="3" fill="#3BC9D9" opacity="0.5"/>
+    <rect x="631" y="120" width="3" height="3" fill="#3BC9D9" opacity="0.4"/>
+    <rect x="669" y="112" width="3" height="3" fill="#3BC9D9" opacity="0.45"/>
+  </svg>
+  <div class="dest-hero-water"></div>
+  <div class="dest-hero-grad"></div>
+  <div class="dest-hero-content">
+    <div class="dest-eyebrow"><div class="dest-ey-line"></div><div class="dest-ey-text">ACT Destinations</div></div>
+    <h1>Conference venues in <em>Canberra</em></h1>
+    <p>Australia's national capital — and the preferred destination for government, peak body, and policy-focused conferences. Canberra combines purpose-built convention facilities, world-class national institutions, and a surprisingly vibrant dining and hospitality scene.</p>
+    <div class="dest-hero-stats">
+      <div><div class="dhs-n">45+</div><div class="dhs-l">Vetted venues</div></div>
+      <div><div class="dhs-n">35yr</div><div class="dhs-l">Local relationships</div></div>
+      <div><div class="dhs-n">48hr</div><div class="dhs-l">Shortlist turnaround</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="brief-bar">
+  <div><div class="bb-text">Ready to find your Canberra venue?</div><div class="bb-sub">Submit a brief — we'll deliver a shortlist within 48 hours. Free service, no obligation.</div></div>
+  <a href="submit-a-brief.html" class="btn btn-white" style="white-space:nowrap;">Submit a brief →</a>
+</div>
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-n">35</div><div class="trust-l">Years finding venues</div></div>
+  <div class="trust-item"><div class="trust-n">45+</div><div class="trust-l">Canberra venue relationships</div></div>
+  <div class="trust-item"><div class="trust-n">Free</div><div class="trust-l">Always, for event bookers</div></div>
+  <div class="trust-item"><div class="trust-n">48hr</div><div class="trust-l">Shortlist guarantee</div></div>
+  <div class="trust-item"><div class="trust-n">Better</div><div class="trust-l">Rates than going direct</div></div>
+</div>
+
+<div class="dest-main">
+  <div class="dest-content">
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Canberra overview</div></div>
+    <h2 class="section-title">Why book your conference <em>in Canberra</em></h2>
+    <div class="photo-strip">
+      <div class="photo-strip-main"></div>
+      <div class="photo-strip-right"><div class="photo-strip-sm"></div><div class="photo-strip-sm"></div></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.8;">CVBS has been sourcing Canberra conference venues since 1989. Canberra is Australia's most underrated conference city. The compact geography means delegates can move between venues, government departments, and cultural institutions easily — and the hotel and hospitality scene has improved markedly over the past decade. For government, association, and policy-focused events, Canberra is often the natural and most practical choice.</p>
+    <div class="divider"></div>
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Venue types</div></div>
+    <h2 class="section-title">What's available <em>in Canberra</em></h2>
+    <div class="venue-types">
+      <div class="vt"><div class="vt-photo"></div><div class="vt-body"><div class="vt-name">Hotel conference centres</div><div class="vt-desc">Canberra's leading hotel conference facilities are concentrated in Civic, Barton, and Kingston — all close to Parliament House and key government departments.</div><div class="vt-count">18+ options</div></div></div>
+      <div class="vt"><div class="vt-photo"></div><div class="vt-body"><div class="vt-name">National Convention Centre</div><div class="vt-desc">National Convention Centre Canberra — the city's primary purpose-built facility. Flexible for 50–2,000 delegates with strong AV and catering teams.</div><div class="vt-count">1 major + 4 purpose-built</div></div></div>
+      <div class="vt"><div class="vt-photo"></div><div class="vt-body"><div class="vt-name">National institutions</div><div class="vt-desc">The National Gallery, War Memorial, National Library and Museum offer extraordinary event settings — ideal for gala dinners and after-conference functions.</div><div class="vt-count">8+ options</div></div></div>
+      <div class="vt"><div class="vt-photo"></div><div class="vt-body"><div class="vt-name">Regional retreats</div><div class="vt-desc">Southern Tablelands and Snowy Mountains within 2–3 hours. Attractive options for leadership offsites combining conference with alpine or rural experiences.</div><div class="vt-count">10+ options</div></div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Featured venues</div></div>
+    <h2 class="section-title">Canberra venues <em>we recommend</em></h2>
+    <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:4px;">A selection of Canberra properties we work with regularly. Submit a brief and we'll match the right venue to your specific requirements.</p>
+    <div class="venue-list">
+      <div class="venue-card">
+        <div class="vc-photo"></div>
+        <div class="vc-body">
+          <div><div class="vc-name">National Convention Centre Canberra</div><div class="vc-area">Civic</div><div class="vc-desc">Canberra's flagship convention facility with 16 meeting rooms, main plenary for 2,000, and a dedicated events operations team. Central, accessible, and fully self-contained.</div></div>
+          <div class="vc-bottom"><div class="vc-tags"><span class="vc-tag">Conventions</span><span class="vc-tag">Plenary</span><span class="vc-tag">Government</span></div><div><div class="vc-cap-n">2,000</div><div class="vc-cap-l">Max delegates</div></div></div>
+        </div>
+      </div>
+      <div class="venue-card">
+        <div class="vc-photo"></div>
+        <div class="vc-body">
+          <div><div class="vc-name">Hotel Realm</div><div class="vc-area">Barton</div><div class="vc-desc">Canberra's premier boutique hotel, steps from Parliament House. Sophisticated meeting spaces, outstanding dining, and an executive atmosphere suited to government-adjacent events.</div></div>
+          <div class="vc-bottom"><div class="vc-tags"><span class="vc-tag">Boutique</span><span class="vc-tag">Executive</span><span class="vc-tag">Barton</span></div><div><div class="vc-cap-n">300</div><div class="vc-cap-l">Max delegates</div></div></div>
+        </div>
+      </div>
+      <div class="venue-card">
+        <div class="vc-photo"></div>
+        <div class="vc-body">
+          <div><div class="vc-name">QT Canberra</div><div class="vc-area">Civic</div><div class="vc-desc">Design-led hotel in the heart of Civic with contemporary meeting spaces, a stylish ballroom, and excellent food and beverage offerings. Popular for mid-sized corporate events.</div></div>
+          <div class="vc-bottom"><div class="vc-tags"><span class="vc-tag">Design</span><span class="vc-tag">Corporate</span><span class="vc-tag">Central</span></div><div><div class="vc-cap-n">400</div><div class="vc-cap-l">Max delegates</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="note-box" style="margin-top:16px;">We work with 45+ Canberra venues. Submit a brief and we'll match the right property to your group size, dates, and budget.</div>
+    <div class="divider"></div>
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Area guide</div></div>
+    <h2 class="section-title">Canberra <em>precincts & surrounds</em></h2>
+    <div class="areas">
+      <div class="area"><div class="area-photo"></div><div class="area-body"><div class="area-name">Civic & City Centre</div><div class="area-desc">The main commercial and cultural hub. Home to the National Convention Centre, QT, and most hotel conference options. Walkable, with growing dining and bar scene.</div><span class="area-tag">Best for: corporate conferences, association events</span></div></div>
+      <div class="area"><div class="area-photo"></div><div class="area-body"><div class="area-name">Barton & Parliamentary Triangle</div><div class="area-desc">Prestige precinct adjacent to Parliament House. Home to Hotel Realm and the national institutions. The natural choice for government and policy events.</div><span class="area-tag">Best for: government events, gala dinners, peak bodies</span></div></div>
+      <div class="area"><div class="area-photo"></div><div class="area-body"><div class="area-name">Southern Tablelands</div><div class="area-desc">90 mins south. Boutique rural retreats, historic country estates, and small wineries. Ideal for immersive leadership programs away from the capital.</div><span class="area-tag">Best for: leadership retreats, board offsites</span></div></div>
+      <div class="area"><div class="area-photo"></div><div class="area-body"><div class="area-name">Snowy Mountains</div><div class="area-desc">2.5–3 hrs south. Thredbo and Perisher alpine resort facilities operate year-round. Outstanding for residential conferences with an adventure or skiing element.</div><span class="area-tag">Best for: incentive groups, adventure offsites</span></div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Common questions</div></div>
+    <h2 class="section-title">Canberra venue <em>FAQs</em></h2>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">How far in advance should I book a Canberra venue?</div><div class="faq-a">For 100+ delegates, 6–9 months ahead. Canberra's venue supply is more limited than Sydney or Melbourne, and parliamentary sitting periods create significant demand peaks (typically February–June and August–November). For smaller groups, 3–4 months is usually workable.</div></div>
+      <div class="faq-item"><div class="faq-q">What does a Canberra conference venue cost per delegate?</div><div class="faq-a">Day delegate rates (DDR) typically range from $85–$155 per person per day, including room hire, AV, and catering. Residential packages range from $240–$420+ per person. Canberra generally offers good value compared to Sydney or Melbourne.</div></div>
+      <div class="faq-item"><div class="faq-q">Is Canberra only suitable for government events?</div><div class="faq-a">Definitely not. Canberra suits any organisation with national membership or reach — associations, peak bodies, professional organisations, and any group that benefits from proximity to government decision-makers. The city's national institutions also make outstanding gala dinner venues for any sector.</div></div>
+      <div class="faq-item"><div class="faq-q">Can you beat the rate I'd get direct?</div><div class="faq-a">In most cases, yes. Our collective volume gives us meaningful leverage with Canberra's hotel groups. Clients consistently confirm our rates match or beat going direct.</div></div>
+      <div class="faq-item"><div class="faq-q">Do you cover venues outside the Canberra CBD?</div><div class="faq-a">Yes — including the Southern Tablelands, Snowy Mountains, and the ACT's wider region. If you're open to combining Canberra with a day's offsite in the surrounding region, tell us in your brief.</div></div>
+    </div>
+  </div>
+
+  <div class="dest-sidebar">
+    <div class="ds-brief">
+      <div class="ds-brief-title">Find a Canberra venue</div>
+      <div class="ds-brief-sub">Shortlist within 48 hours. Free service.</div>
+      <div class="ds-field"><span class="ds-label">Event type</span><select class="ds-select"><option>Conference</option><option>Board retreat</option><option>Government event</option><option>Association AGM</option><option>Gala dinner</option></select></div>
+      <div class="ds-field"><span class="ds-label">Delegates</span><select class="ds-select"><option>Under 20</option><option>20–50</option><option>50–100</option><option>100–200</option><option>200+</option></select></div>
+      <div class="ds-field"><span class="ds-label">Approx. dates</span><input class="ds-input" type="text" placeholder="e.g. October 2026" /></div>
+      <div class="ds-field"><span class="ds-label">Your email</span><input class="ds-input" type="email" placeholder="your@email.com.au" /></div>
+      <button class="ds-btn">Submit my Canberra brief →</button>
+      <div class="ds-note">Free · No obligation · 48hr response</div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">Why use CVBS for Canberra</div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>35 years</strong> sourcing Canberra venues</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>Direct relationships</strong> with 45+ venue managers</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>Better rates</strong>. Our volume gives us leverage you can't get direct</div></div>
+      <div class="ds-item"><div class="ds-dot"></div><div class="ds-text"><strong>One brief</strong>, we handle all research and negotiation</div></div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">What clients say</div>
+      <div class="testi-mini"><div class="tm-q">"Our annual policy forum runs in Canberra every year. CVBS makes the whole process effortless — they know exactly which venues work for government-adjacent events."</div><div class="tm-a">Andrew B.</div><div class="tm-c">National Policy Director, ACT · Long-term client</div></div>
+      <div class="testi-mini"><div class="tm-q">"CVBS found us a National Gallery dinner option we didn't know was available. The delegates were blown away — it was the best conference function we'd ever run."</div><div class="tm-a">Caroline T.</div><div class="tm-c">CEO, National Association · Long-term client</div></div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">Other destinations</div>
+      <div class="dl-list">
+        <a href="sydney.html" class="dl-link">Sydney <span>200+ venues</span></a>
+        <a href="melbourne.html" class="dl-link">Melbourne <span>170+ venues</span></a>
+        <a href="brisbane.html" class="dl-link">Brisbane <span>90+ venues</span></a>
+        <a href="goldcoast.html" class="dl-link">Gold Coast <span>60+ venues</span></a>
+        <a href="canberra.html" class="dl-link active">Canberra <span>45+ venues</span></a>
+        <a href="destinations.html" class="dl-link">All destinations →</a>
+      </div>
+    </div>
+    <div class="ds-card" style="background:var(--light-bg);">
+      <div class="ds-card-title">Prefer to talk?</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px;">Karen and Anthony are happy to discuss your Canberra brief.</div>
+      <div style="font-size:15px;color:var(--teal);font-weight:600;">+61 402 033 861</div>
+      <div style="font-size:11px;color:#aaa;margin-top:3px;">Mon–Fri, 9am–5pm AEST</div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
+  <div>
+    <div style="font-size:28px;font-weight:500;color:#fff;font-family:var(--font-serif);line-height:1.2;margin-bottom:8px;">Ready to find your <em style="font-style:italic;color:var(--teal);">Canberra venue?</em></div>
+    <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65;max-width:340px;">Submit a brief and receive a fully costed shortlist within 48 hours. No cost, no obligation.</p>
+  </div>
+  <div>
+    <a href="submit-a-brief.html" class="btn btn-primary" style="font-size:14px;padding:13px 28px;">Submit your brief →</a>
+    <div style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px;">Free service · 48hr response guaranteed</div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="logo.png" alt="CVBS" /></div><p class="footer-tagline">Australia's most trusted venue finding service, since 1989. Not because we've been doing it longest, but because our clients keep coming back.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><a href="services.html">Conference venue finding</a><a href="services.html">Group accommodation</a><a href="services.html">Product launches & events</a><a href="services.html">Corporate relocation</a></div>
+    <div class="footer-col"><div class="footer-col-title">Destinations</div><a href="sydney.html">Sydney</a><a href="melbourne.html">Melbourne</a><a href="brisbane.html">Brisbane</a><a href="goldcoast.html">Gold Coast</a><a href="destinations.html">All destinations →</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About us</a><a href="how-it-works.html">How it works</a><a href="offers.html">Offers</a><a href="how-we-are-paid.html">How we're paid</a><a href="results.html">Client results</a><a href="blog-index.html">Blog</a></div>
+  </div>
+  <div class="footer-bar">
+    <p>© 2026 Conference Venues &amp; Booking Services · conferencevenues.com.au · +61 402 033 861 · info@conferencevenues.com.au</p>
+    <div class="footer-bar-links"><a href="#">Privacy policy</a><a href="offers.html">Offers</a><a href="how-we-are-paid.html">How we're paid</a><a href="submit-a-brief.html">Submit a brief</a></div>
+  </div>
+</footer>
+<script>(function(){var btn=document.getElementById('hamburgerBtn');var menu=document.getElementById('mobileMenu');var overlay=document.getElementById('mobileOverlay');if(!btn)return;function closeMenu(){btn.classList.remove('open');menu.classList.remove('open');overlay.classList.remove('show');btn.setAttribute('aria-expanded','false');}btn.addEventListener('click',function(){var isOpen=menu.classList.contains('open');if(isOpen){closeMenu();}else{btn.classList.add('open');menu.classList.add('open');overlay.classList.add('show');btn.setAttribute('aria-expanded','true');}});overlay.addEventListener('click',closeMenu);menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});})();</script>
+</body>
+</html>
