@@ -412,14 +412,14 @@ img { max-width: 100%; display: block; }
     url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1400&q=80&fit=crop') center/cover no-repeat !important;
 }
 /* Destination cards */
-.dest-card:nth-child(1) { background: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(2) { background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(3) { background: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(4) { background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(5) { background: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(6) { background: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(7) { background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fit=crop') center/cover no-repeat !important; }
-.dest-card:nth-child(8) { background: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop') center/cover no-repeat !important; }
+.dest-card:nth-child(1) { background: url('assets/images/dest-sydney.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(2) { background: url('assets/images/dest-melbourne.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(3) { background: url('assets/images/dest-brisbane.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(4) { background: url('assets/images/dest-gold-coast.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(5) { background: url('assets/images/dest-canberra.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(6) { background: url('assets/images/dest-hunter-valley.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(7) { background: url('assets/images/dest-blue-mountains.jpg') center/cover no-repeat !important; }
+.dest-card:nth-child(8) { background: url('assets/images/dest-international.jpg') center/cover no-repeat !important; }
 /* Offer mini cards */
 .offer-mini:nth-child(1).om-photo { background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&fit=crop') center/cover no-repeat !important; }
 .offer-mini:nth-child(2).om-photo { background: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80&fit=crop') center/cover no-repeat !important; }
@@ -1733,7 +1733,7 @@ img { max-width: 100%; display: block; }
     </div>
   </div>
   <div class="footer-bar">
-    <p>© 2026 Conference Venues & Booking Services · conferencevenues.com.au · +61 402 033 861 · aj@conferencevenues.com.au</p>
+    <p>© 2026 Conference Venues & Booking Services · conferencevenues.com.au · +61 402 033 861 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3b301a3935343c3f283f34393f2c3f342f3f2974393537743b2f">[email&#160;protected]</a></p>
     <div class="footer-bar-links">
       <a href="#">Privacy policy</a>
       <a href="how-we-are-paid.html">How we're paid</a>
@@ -1757,7 +1757,7 @@ img { max-width: 100%; display: block; }
 }
 </style>
 
-<script id="hamburger-js">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="hamburger-js">
 (function(){
   var btn = document.getElementById('hamburgerBtn');
   var menu = document.getElementById('mobileMenu');
@@ -1785,13 +1785,4 @@ img { max-width: 100%; display: block; }
     a.addEventListener('click', closeMenu);
   });
   // mark active page
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  menu.querySelectorAll('a').forEach(function(a){
-    var href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
-  });
-})();
-</script>
-
-</body>
-</html>
+  var path =
