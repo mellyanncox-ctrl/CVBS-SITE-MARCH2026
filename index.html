@@ -1757,7 +1757,7 @@ img { max-width: 100%; display: block; }
 }
 </style>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="hamburger-js">
+<script id="hamburger-js">
 (function(){
   var btn = document.getElementById('hamburgerBtn');
   var menu = document.getElementById('mobileMenu');
@@ -1785,4 +1785,11 @@ img { max-width: 100%; display: block; }
     a.addEventListener('click', closeMenu);
   });
   // mark active page
-  var path =
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  menu.querySelectorAll('a').forEach(function(a){
+    if (a.getAttribute('href') === path) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
