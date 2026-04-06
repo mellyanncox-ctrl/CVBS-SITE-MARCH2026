@@ -937,40 +937,97 @@ img { max-width: 100%; display: block; }
 </style>
 <style id="sydney-mobile-fix">
 @media (max-width: 768px) {
-  /* Destination main layout — sidebar collapses */
-  .dest-main {
-    display: flex !important;
+
+  /* ── HERO ── */
+  .dest-hero { height: auto !important; min-height: 0 !important; }
+  .dest-hero-content { padding: 28px 20px 24px !important; }
+  .dest-hero h1 { font-size: 30px !important; margin-bottom: 8px !important; }
+  .dest-hero p { font-size: 13px !important; margin-bottom: 14px !important; max-width: 100% !important; }
+  .dest-hero-stats { gap: 20px !important; flex-wrap: wrap !important; }
+  .dhs-n { font-size: 20px !important; }
+  .hero-svg { display: none !important; }
+  .dest-hero-water { height: 40px !important; }
+
+  /* ── BRIEF BAR ── */
+  .brief-bar {
     flex-direction: column !important;
+    padding: 16px 20px !important;
+    gap: 12px !important;
+  }
+  .brief-bar .btn-white {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    padding: 13px !important;
+  }
+
+  /* ── DEST MAIN LAYOUT ── */
+  .dest-main {
+    display: block !important;
     grid-template-columns: unset !important;
   }
-  .dest-sidebar {
+  .dest-content {
+    padding: 28px 20px !important;
+    border-right: none !important;
     width: 100% !important;
-    border-left: none !important;
-    border-top: 2px solid #e8f8fa !important;
-    padding: 24px 20px !important;
+    max-width: 100% !important;
   }
-  .dest-content { padding: 24px 20px !important; width: 100% !important; }
+  .dest-sidebar { display: none !important; }
 
-  /* Photo strip — keep as 2-col strip, just shorter */
-  .photo-strip { height: 140px !important; }
+  /* ── PHOTO STRIP ── */
+  .photo-strip {
+    grid-template-columns: 1fr !important;
+    height: 200px !important;
+  }
+  .photo-strip-right { display: none !important; }
+  .photo-strip-main {
+    min-height: 200px !important;
+    border-radius: 8px !important;
+    height: 100% !important;
+  }
 
-  /* Venue types — 2 col fine */
-  .venue-types { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
-
-  /* Venue cards — image on top, text below */
+  /* ── VENUE CARDS ── */
   .venue-card {
     display: flex !important;
     flex-direction: column !important;
     grid-template-columns: unset !important;
   }
-  .venue-card img, .vc-photo {
+  .venue-card .vc-photo, .vc-photo {
     width: 100% !important;
     height: 160px !important;
     object-fit: cover !important;
   }
 
-  /* Areas grid */
-  .areas { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  /* ── VENUE TYPES & AREAS ── */
+  .venue-types { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .vt-photo { height: 120px !important; }
+  .areas { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .area-photo { height: 120px !important; }
+
+  /* ── BOTTOM CTA (inline div at end of page) ── */
+  .dest-bottom-cta,
+  div[style*="background:var(--navy)"][style*="display:flex"] {
+    flex-direction: column !important;
+    padding: 32px 20px !important;
+    gap: 20px !important;
+  }
+  .dest-bottom-cta .btn,
+  div[style*="background:var(--navy)"] .btn {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb { padding: 10px 20px !important; }
+
+  /* ── SECTION TITLES ── */
+  .section-title { font-size: 20px !important; }
+}
+
+@media (max-width: 400px) {
+  .venue-types, .areas { grid-template-columns: 1fr !important; }
+  .dest-hero h1 { font-size: 24px !important; }
 }
 </style></head>
 <body>
@@ -1227,7 +1284,7 @@ img { max-width: 100%; display: block; }
     </div>
   </div>
 </div>
-<div style="background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
+<div class="dest-bottom-cta" style="background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
   <div><div style="font-size:28px;font-weight:500;color:#fff;font-family:var(--font-serif);line-height:1.2;margin-bottom:8px;">Ready to find your <em style="font-style:italic;color:var(--teal);">Sydney venue?</em></div><p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65;max-width:340px;">Submit a brief and receive a fully costed shortlist within 48 hours. No cost, no obligation.</p></div>
   <div><a href="submit-a-brief.html" class="btn btn-primary" style="font-size:14px;padding:13px 28px;">Submit your brief →</a><div style="font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px;">Free service · 48hr response guaranteed</div></div>
 </div>
