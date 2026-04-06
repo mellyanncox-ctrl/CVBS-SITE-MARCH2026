@@ -1472,6 +1472,19 @@ document.getElementById('location').addEventListener('change', function() {
       Array.from(locEl.options).forEach(opt => {
         if (opt.value === location || opt.text === location) locEl.value = opt.value;
       });
+      // Show free-text field if International or Other was pre-selected
+      const otherField = document.getElementById('otherLocationField');
+      const label = document.getElementById('otherLocationLabel');
+      const input = document.getElementById('otherLocation');
+      if (locEl.value === 'International') {
+        otherField.style.display = 'block';
+        label.textContent = 'Which country or city?';
+        input.placeholder = 'e.g. Singapore, Bali, New Zealand, Tokyo';
+      } else if (locEl.value === 'Other') {
+        otherField.style.display = 'block';
+        label.textContent = 'Please specify location';
+        input.placeholder = 'e.g. Darwin, NT or Regional Victoria';
+      }
     }
   }
 
