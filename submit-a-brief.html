@@ -805,22 +805,22 @@ body { overflow-x: hidden; }
           <label>What do you need help with? <span class="req">*</span> <span style="font-weight:400;color:#aaa;font-size:11px;">Select all that apply</span></label>
           <div class="svc-selector" id="svcSelector">
             <div class="svc-opt" data-val="Conference venue finding">
-              <div class="svc-icon">🏨</div>
+              <div class="svc-icon"></div>
               <div class="svc-body"><div class="svc-name">Conference venue finding</div><div class="svc-desc">Find the right venue for your conference, AGM, board retreat or training day</div></div>
               <div class="svc-chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" fill="none" stroke="white" stroke-width="1.8"/></svg></div>
             </div>
             <div class="svc-opt" data-val="Group accommodation">
-              <div class="svc-icon">🛏</div>
+              <div class="svc-icon"></div>
               <div class="svc-body"><div class="svc-name">Group accommodation</div><div class="svc-desc">Block rates for delegate accommodation, corporate retreats or group stays</div></div>
               <div class="svc-chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" fill="none" stroke="white" stroke-width="1.8"/></svg></div>
             </div>
             <div class="svc-opt" data-val="Product launch or event">
-              <div class="svc-icon">🎯</div>
+              <div class="svc-icon"></div>
               <div class="svc-body"><div class="svc-name">Product launch or event</div><div class="svc-desc">Rooftop terraces, heritage buildings, waterfront wharves, gallery spaces</div></div>
               <div class="svc-chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" fill="none" stroke="white" stroke-width="1.8"/></svg></div>
             </div>
             <div class="svc-opt" data-val="Corporate relocation accommodation">
-              <div class="svc-icon">🏢</div>
+              <div class="svc-icon"></div>
               <div class="svc-body"><div class="svc-name">Corporate relocation accommodation</div><div class="svc-desc">Serviced apartments or extended-stay hotels for assignments and executives</div></div>
               <div class="svc-chk"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" fill="none" stroke="white" stroke-width="1.8"/></svg></div>
             </div>
@@ -838,14 +838,14 @@ body { overflow-x: hidden; }
               <option>Canberra, ACT</option><option>Perth, WA</option>
               <option>Adelaide, SA</option><option>Hunter Valley, NSW</option>
               <option>Blue Mountains, NSW</option><option>Yarra Valley, VIC</option>
-              <option>International</option>
+              <option value="International">International</option>
               <option>Flexible / open to suggestions</option>
               <option>Other</option>
             </select>
             <div class="error-msg">Please select a location</div>
           </div>
           <div class="field" id="otherLocationField" style="display:none;">
-            <label>Please specify location</label>
+            <label id="otherLocationLabel">Please specify location</label>
             <input type="text" id="otherLocation" placeholder="e.g. Darwin, NT or Regional Victoria" />
           </div>
           <div class="field" id="fDelegates">
@@ -1083,7 +1083,7 @@ body { overflow-x: hidden; }
       <div style="font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.6;">Karen and Anthony are happy to take your brief over the phone.</div>
       <a href="tel:+61402033861" style="font-size:16px;color:var(--teal);font-weight:600;display:block;text-decoration:none;">+61 402 033 861</a>
       <div style="font-size:11px;color:#aaa;margin-top:3px;">Mon–Fri, 9am–5pm AEST</div>
-      <div style="font-size:12px;color:var(--teal);margin-top:5px;">aj@conferencevenues.com.au</div>
+      <div style="font-size:12px;color:var(--teal);margin-top:5px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="25444f65464a4b434057404b464053404b5040560b464a480b4450">[email&#160;protected]</a></div>
     </div>
   </div><!-- /sidebar -->
 
@@ -1210,7 +1210,7 @@ body { overflow-x: hidden; }
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── STATE ──────────────────────────────────────────────────────────────────
 let currentStep = 1;
 let calMode = 'start';
@@ -1388,7 +1388,8 @@ function populateReview() {
   document.getElementById('rv-service').textContent = svcs.length ? svcs.join(', ') : '—';
   const locVal = document.getElementById('location').value;
   const otherLoc = document.getElementById('otherLocation').value;
-  document.getElementById('rv-location').textContent = locVal === 'Other' && otherLoc ? otherLoc : (locVal || '—');
+  const showOther = (locVal === 'Other' || locVal === 'International') && otherLoc;
+  document.getElementById('rv-location').textContent = showOther ? (locVal === 'International' ? 'International — ' + otherLoc : otherLoc) : (locVal || '—');
   document.getElementById('rv-delegates').textContent = document.getElementById('delegates').value || '—';
   document.getElementById('rv-duration').textContent = document.getElementById('duration').value;
   document.getElementById('rv-accommodation').textContent = document.getElementById('accommodation').value;
@@ -1434,8 +1435,20 @@ renderCal();
 // Show/hide other location field
 document.getElementById('location').addEventListener('change', function() {
   const otherField = document.getElementById('otherLocationField');
-  otherField.style.display = this.value === 'Other' ? 'block' : 'none';
-  if (this.value !== 'Other') document.getElementById('otherLocation').value = '';
+  const label = document.getElementById('otherLocationLabel');
+  const input = document.getElementById('otherLocation');
+  if (this.value === 'Other') {
+    otherField.style.display = 'block';
+    label.textContent = 'Please specify location';
+    input.placeholder = 'e.g. Darwin, NT or Regional Victoria';
+  } else if (this.value === 'International') {
+    otherField.style.display = 'block';
+    label.textContent = 'Which country or city?';
+    input.placeholder = 'e.g. Singapore, Bali, New Zealand, Tokyo';
+  } else {
+    otherField.style.display = 'none';
+    input.value = '';
+  }
 });
 
 // ── PRE-FILL FROM HOMEPAGE HERO FORM PARAMS ──────────────────────────────
@@ -1491,7 +1504,7 @@ document.getElementById('location').addEventListener('change', function() {
     if (hero) {
       const notice = document.createElement('div');
       notice.style.cssText = 'background:rgba(255,255,255,0.15);border-radius:6px;padding:10px 14px;margin-top:12px;font-size:12px;color:#fff;font-weight:500;';
-      notice.innerHTML = '🎯 Enquiring about: <strong>' + decoded + '</strong>';
+      notice.innerHTML = 'Enquiring about: <strong>' + decoded + '</strong>';
       hero.parentNode.insertBefore(notice, hero.nextSibling);
     }
   }
@@ -1526,13 +1539,4 @@ document.getElementById('location').addEventListener('change', function() {
     a.addEventListener('click', closeMenu);
   });
   // mark active page
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  menu.querySelectorAll('a').forEach(function(a){
-    var href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
-  });
-})();
-</script>
-
-</body>
-</html>
+  var path =
