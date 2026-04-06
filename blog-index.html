@@ -194,6 +194,8 @@ img { max-width: 100%; display: block; }
 .bf-photo {
     min-height: 260px;
     background: linear-gradient(135deg, var(--navy) 0%, #1a4060 100%);
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .bf-cat {
@@ -238,6 +240,8 @@ img { max-width: 100%; display: block; }
 .bc-photo {
     height: 160px;
     background: linear-gradient(135deg, #1a2a3a, #2a4a6a);
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .bc-cat {
@@ -770,7 +774,7 @@ img { max-width: 100%; display: block; }
 
     <!-- FEATURED: How to write a brief (existing article) -->
     <a href="blog.html" class="blog-featured">
-      <div class="bf-photo" style="background:linear-gradient(135deg,#0d2233 0%,#1a5a7a 100%);">
+      <div class="bf-photo" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&auto=format&fit=crop&q=60');background-size:cover;background-position:center;">
         <div class="bf-cat">Planning guide</div>
       </div>
       <div class="bf-body">
@@ -792,7 +796,7 @@ img { max-width: 100%; display: block; }
     <div class="blog-grid">
 
       <a href="blog-cost-guide.html" class="blog-card">
-        <div class="bc-photo" style="background:linear-gradient(135deg,#0d2233,#1a3a5a);">
+        <div class="bc-photo" style="background-image:url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&auto=format&fit=crop&q=60');background-size:cover;background-position:center;">
           <div class="bc-cat">Cost guide</div>
         </div>
         <div class="bc-body">
@@ -807,7 +811,7 @@ img { max-width: 100%; display: block; }
       </a>
 
       <a href="blog-sydney-vs-melbourne.html" class="blog-card">
-        <div class="bc-photo" style="background:linear-gradient(135deg,#1a2a3a,#2a5a8a);">
+        <div class="bc-photo" style="background-image:url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&auto=format&fit=crop&q=60');background-size:cover;background-position:center;">
           <div class="bc-cat">Destination guide</div>
         </div>
         <div class="bc-body">
@@ -822,7 +826,7 @@ img { max-width: 100%; display: block; }
       </a>
 
       <a href="blog-hunter-valley.html" class="blog-card">
-        <div class="bc-photo" style="background:linear-gradient(135deg,#3a2a0a,#6a4a1a);">
+        <div class="bc-photo" style="background-image:url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&auto=format&fit=crop&q=60');background-size:cover;background-position:center;">
           <div class="bc-cat">Destination guide</div>
         </div>
         <div class="bc-body">
@@ -913,7 +917,7 @@ img { max-width: 100%; display: block; }
     </div>
   </div>
   <div class="footer-bar">
-    <p>© 2026 Conference Venues &amp; Booking Services · conferencevenues.com.au · +61 402 033 861 · aj@conferencevenues.com.au</p>
+    <p>© 2026 Conference Venues &amp; Booking Services · conferencevenues.com.au · +61 402 033 861 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0f042e0d0100080b1c0b000d0b180b001b0b1d400d0103400f1b">[email&#160;protected]</a></p>
     <div class="footer-bar-links">
       <a href="#">Privacy policy</a>
       <a href="offers.html">Offers</a><a href="how-we-are-paid.html">How we're paid</a>
@@ -923,7 +927,7 @@ img { max-width: 100%; display: block; }
 </footer>
 
 
-<script id="hamburger-js">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="hamburger-js">
 (function(){
   var btn = document.getElementById('hamburgerBtn');
   var menu = document.getElementById('mobileMenu');
@@ -951,13 +955,4 @@ img { max-width: 100%; display: block; }
     a.addEventListener('click', closeMenu);
   });
   // mark active page
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  menu.querySelectorAll('a').forEach(function(a){
-    var href = a.getAttribute('href');
-    if (href === path) a.classList.add('active');
-  });
-})();
-</script>
-
-</body>
-</html>
+  var path =
